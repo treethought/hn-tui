@@ -9,7 +9,7 @@ use cursive::views::{
 use cursive::{Cursive, CursiveExt};
 use html_parser::{Dom, Element, Node};
 
-#[derive(Debug, Default)] 
+#[derive(Debug, Default)] // debug for printing, Default for initializing empty
 struct HNPost {
     title: String,
     link: String,
@@ -24,6 +24,7 @@ impl HNPost {
             id: String::new(),
         }
     }
+}
 
 // extracts post title and link from the "titlelink" class post element
 fn extract_title_link(elem: &Element) -> (String, String) {
